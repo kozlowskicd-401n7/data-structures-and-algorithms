@@ -1,3 +1,3 @@
 # data-structures-and-algorithms
 ## Challenge 1 - Reverse Array
-<img href='/assets/array_reverse.jpg'/>
+<img src='/assets/array_reverse.jpg'/>
