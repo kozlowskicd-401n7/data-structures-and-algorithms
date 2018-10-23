@@ -1,0 +1,24 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "The main goal of this first challenge is to get practice with whiteboarding and thinking through issues. ### Challenge Given an input array, build a function to return the array with all elements in reverse order.  No built-in language methods may be used. ### Solution <img src='/assets/array_reverse.jpg' width=640 height=480 />",
+  "main": "array_binary_search.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "npm run eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozlowskicd/data-structures-and-algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kozlowskicd/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/kozlowskicd/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0"
+  }
+}
