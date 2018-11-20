@@ -90,23 +90,26 @@ class BinarySearchTree {
     else {
       _step(node); 
     }
-        
+  }
+  search(value) {
+    let _step = node => {
+      if (node.value === value) {
+        return node;
+      }
+      else if (node.value > value && node.left.value) {
+        _step(node.left);
+      }
+      else if (node.value < value && node.right.value) {
+        _step(node.right);
+      }
+      else {
+        return null;
+      }
+    };
+    _step(this.root);
   }
 }
-let tree = new Tree;
-let binaryTree = new BinarySearchTree;
 
-tree.preOrder;
-binaryTree.add(10);
-binaryTree.add(15);
-binaryTree.add(2);
-binaryTree.add(9);
-binaryTree.add(42);
-binaryTree.add(1);
-binaryTree.add(33);
-binaryTree.add(25);
-binaryTree.add(88);
-binaryTree.add(27);
-binaryTree.add(52);
-
-console.log(binaryTree);
+exports.Node = Node;
+exports.Tree = Tree;
+exports.BinarySearchTree = BinarySearchTree;
