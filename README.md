@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/kozlowskicd/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/kozlowskicd/data-structures-and-algorithms)
 # Data Structures and Algorithms Exercises
 This is a collection of exercises and code challenges focusing on data structures and algorithms.
 
