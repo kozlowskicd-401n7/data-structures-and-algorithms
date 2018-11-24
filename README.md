@@ -71,3 +71,5 @@ Creates a new node with the given value and adds it to stack1.
 Iterate through, popping a node off stack1 and pushing it onto stack2, then pop one off stack 2 and hold the value in an output variable.  Iterate again, popping off stack2, pushing onto stack1, finally return the output variable.
 ##### peek()
 Returns the next item to come off the qseudoqueue, but doesn't remove it.
+#### Whiteboard
+<img src='/assets/queuesWithStacks.jpg' width=640 height=480 />
