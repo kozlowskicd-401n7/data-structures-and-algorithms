@@ -37,10 +37,10 @@ describe('Merging 2 Linked Lists', () => {
     let results = mergeList(list1, list2);
     expect(results.head.value).toBe(1);
     expect(results.head.next.value).toBe(2);
-  })
-    it('zips both lists together completely', () => {
-      let merge = mergeList(list1, list2);
-      let results = merge.serialize();
-      expect(results).toEqual([1,2,3,4,5,6,7,8,9,10]);
   });
-})
+  it('zips both lists together completely', () => {
+    let merge = mergeList(list1, list2);
+    let results = merge.serialize();
+    expect(results).toEqual([1,2,3,4,5,6,7,8,9,10]);
+  });
+});
