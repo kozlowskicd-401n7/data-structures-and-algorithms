@@ -13,13 +13,18 @@ Binary Trees -->
 
 ### Reverse Array
 Given an input array, build a function to return the array with all elements in reverse order.  No built-in language methods may be used.
-#### Solution
+#### Whiteboard
 <img src='/assets/array_reverse.jpg' width=640 height=480 />
 
 ### Array Binary Search
 Make a function that takes in a sorted array and a value.  Perform a binary search to find the value in the array and return the index position.  Return -1 if the value is not in the array.  No pre-built methods may be used.
-#### Solution
+#### Whiteboard
 <img src='.assests/array_binary_search.jpg' width=640 height=480 />
+
+### Array Shift
+Make a function that takes in an array and a number, and inserts the number into the middle of the array.
+#### Whiteboard
+<img src='.assests/insertArray.jpg' width=640 height=480 />
 
 ## Linked Lists
 
