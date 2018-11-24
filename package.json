@@ -5,7 +5,6 @@
   "main": "./linked-list/linklist.js",
   "scripts": {
     "test": "jest --verbose --coverage"
-
   },
   "repository": {
     "type": "git",
