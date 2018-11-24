@@ -1,6 +1,6 @@
 'use strict';
 
-const binarySearch = require('../array_binary_search.js');
+const binarySearch = require('../arrays/array_binary_search.js');
 
 describe('Binary Search Tests', () => {
     it('can return a value', () => {

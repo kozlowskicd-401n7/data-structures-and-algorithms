@@ -1,6 +1,7 @@
 'use strict';
 
-const Stack = require('../stacksAndQueues/stacks-and-queues.js');
+const Stack = require('../stacksAndQueues/stack.js');
+const Queue = require('../stacksAndQueues/queue.js');
 
 describe('Stacks', () => {
   it('can create and empty stack', () => {
@@ -21,7 +22,7 @@ describe('Stacks', () => {
   it('can peek the top node', () => {
 
   });
-})
+});
 describe('Queues', () => {
   it('can create an empty queue', () => {
 

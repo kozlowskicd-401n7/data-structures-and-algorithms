@@ -7,34 +7,11 @@ class Node {
   }
 }
 
-class Stack {
-  constructor() {
-    this.top = null;
-  }
-
-  push(value) {
-    let newNode = new Node(value);
-    newNode.next = this.top;
-    this.top = newNode;
-    return this;
-  }
-
-  pop() {
-    let pop = this.top;
-    this.top = this.top.next;
-    return pop;
-  }
-
-  peek() {
-    return this.top.value;
-  }
-}
-
 class Queue {
   constructor() {
     this.front = null;
   }
-
+  
   enqueue(value) {
     if (!this.front) {
       let newNode = new Node(value);
@@ -49,16 +26,16 @@ class Queue {
     currentNode.next = newNode;
     return this;
   }
-
+  
   dequeue() {
     let front = this.front;    
     this.front = this.front.next;
     return front;
   }
-
+  
   peek() {
     return this.front;
   }
 }
 
-module.exports = Stack;
+module.exports = Queue;
