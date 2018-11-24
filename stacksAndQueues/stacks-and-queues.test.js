@@ -1,7 +1,7 @@
 'use strict';
 
 import Stack from './stacks-and-queues.js';
-import Queue from './stacks-and-queues.js';
+// import Queue from './stacks-and-queues.js';
 
 describe('Stacks', () => {
   it('can create and empty stack', () => {
