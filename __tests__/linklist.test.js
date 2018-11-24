@@ -9,7 +9,6 @@ describe('Linked List', () => {
     expect(list).toBeInstanceOf(Object);
     expect(list.head).toBeNull();
   });
-    
   it('append()', ()=> {
     let list = new LinkedList();
     let initialValue = 'First One';
@@ -21,7 +20,6 @@ describe('Linked List', () => {
     let anotherOne = 'Another One';
     list.append(anotherOne);
   });
-
   it('prepend()', () => {
     let list = new LinkedList();
     let firstValue = 'First One';
@@ -30,7 +28,6 @@ describe('Linked List', () => {
     list.prepend(secondValue);
     expect(list.head.value).toEqual(secondValue);
   });
-
   it('reverse()', () => {
     let list = new LinkedList();
     let firstValue = 'First One';
@@ -42,7 +39,6 @@ describe('Linked List', () => {
     list.reverse();
     expect(list.head.value).toEqual(thirdValue);
   });
-
   it('remove()', () => {
     let list = new LinkedList();
     let firstValue = 'First One';
@@ -55,7 +51,6 @@ describe('Linked List', () => {
     expect(list.length).toEqual(2);
     expect(list.head.value).toEqual(firstValue);
   });
-  
   it('serialize()', () => {
     let list = new LinkedList();
     let firstValue = 'First One';
@@ -108,4 +103,4 @@ describe('Linked List getKthFromEnd()', () => {
     expect(list.getKthFromEnd(1)).toBe(2);
     expect(list.getKthFromEnd(2)).toBe(1);
   });
-})
+});

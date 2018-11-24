@@ -60,3 +60,5 @@ class Queue {
     return this.front;
   }
 }
+
+module.exports = Stack;

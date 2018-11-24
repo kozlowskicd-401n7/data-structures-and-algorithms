@@ -1,7 +1,6 @@
 'use strict';
 
-import Stack from './stacks-and-queues.js';
-// import Queue from './stacks-and-queues.js';
+const Stack = require('../stacksAndQueues/stacks-and-queues.js');
 
 describe('Stacks', () => {
   it('can create and empty stack', () => {
@@ -9,6 +8,7 @@ describe('Stacks', () => {
     expect(stack).toBeInstanceOf(Object);
   });
   it('can push a new node', () => {
+    let stack = new Stack;
     stack.push(1);
     expect(stack.top.value).toBe(1);
   });
