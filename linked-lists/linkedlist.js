@@ -40,11 +40,11 @@ class LinkedList {
     let currentNode = this.head;
     while (currentNode.next) {
       if (currentNode.next.value == val) {
-      let newNode = new Node(newVal);
-      newNode.next = currentNode.next;
-      currentNode.next = newNode;
-      this.length++;
-      return this;
+        let newNode = new Node(newVal);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        this.length++;
+        return this;
       }
     }
     return null;

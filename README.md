@@ -19,12 +19,12 @@ Given an input array, build a function to return the array with all elements in 
 ### Array Binary Search
 Make a function that takes in a sorted array and a value.  Perform a binary search to find the value in the array and return the index position.  Return -1 if the value is not in the array.  No pre-built methods may be used.
 #### Whiteboard
-<img src='.assests/array_binary_search.jpg' width=640 height=480 />
+<img src='.assets/array_binary_search.jpg' width=640 height=480 />
 
 ### Array Shift
-Make a function that takes in an array and a number, and inserts the number into the middle of the array.
+Make a function that takes in an array and a number, and inserts the number into the middle of the array.  Do not use any built-in array methods.
 #### Whiteboard
-<img src='.assests/insertArray.jpg' width=640 height=480 />
+<img src='.assets/insertArray.jpg' width=640 height=480 />
 
 ## Linked Lists
 
@@ -44,10 +44,15 @@ Creates an array with each node taking a position in the array.
 
 ### Linked List Insertions
 Create two methods, `insertBefore` and `insertAfter`.  Both take in a number and a value.  The list will move forward through the list that given number of times, where a new Node is created and added before or after that point in the list.
+#### Whiteboard
+<img src='.assets/ll-insertions.jpg' width=640 height=480 />
 ### Add getKthFromEnd() Method
 Create a method that takes in a number, searches from the end that far and return from that position.
+#### Whiteboard
+<img src='.assets/getKthFromEnd.jpg' width=640 height=480 />
 ### Linked List Merge
 Given two lists, create a function that creates a new list using their alternating values.
+<img src='.assets/ll-merge.jpg' width=640 height=480 />
 
 ## Stacks and Queues
 
