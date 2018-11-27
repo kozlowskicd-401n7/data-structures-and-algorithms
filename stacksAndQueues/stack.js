@@ -1,11 +1,6 @@
 'use strict';
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+const Node = require('../lib/node.js');
 
 class Stack {
   constructor() {

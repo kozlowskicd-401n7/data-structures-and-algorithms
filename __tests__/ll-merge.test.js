@@ -40,7 +40,11 @@ describe('Merging 2 Linked Lists', () => {
   });
   it('zips both lists together completely', () => {
     let merge = mergeList(list1, list2);
-    let results = merge.serialize();
-    expect(results).toEqual([1,2,3,4,5,6,7,8,9,10]);
+    let serial = merge.serialize();
+    let arr = [];
+    serial.forEach(one => {
+      arr.push(one.value);
+    });
+    expect(arr).toEqual([1,2,3,4,5,6,7,8,9,10]);
   });
 });

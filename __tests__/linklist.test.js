@@ -1,12 +1,10 @@
 'use strict';
-
 const LinkedList = require('../linked-lists/linkedlist.js');
+const deserialize = require('../lib/deserialize.js');
 
 describe('Linked List', () => {
-
   it('constructor()', ()=> {
     let list = new LinkedList();
-    expect(list).toBeInstanceOf(Object);
     expect(list.head).toBeNull();
   });
   it('append()', ()=> {
@@ -18,7 +16,7 @@ describe('Linked List', () => {
     list.append(newValue);
     expect(list.head.value).toEqual(initialValue);
     let anotherOne = 'Another One';
-    list.append(anotherOne);
+    list.append(anotherOne);    
   });
   it('prepend()', () => {
     let list = new LinkedList();
@@ -28,79 +26,52 @@ describe('Linked List', () => {
     list.prepend(secondValue);
     expect(list.head.value).toEqual(secondValue);
   });
+  let list = new LinkedList();  // This list to be used for all remaining tests
+  let firstValue = 'First One';
+  let secondValue = 'Second One';
+  let thirdValue = 'Third One';
+  let fourthValue = 'Fourth One';
+  let fifthValue = 'Fifth One';
+  list.append(firstValue);
+  list.append(secondValue);
+  list.append(thirdValue);
+  list.append(fourthValue);
+  list.append(fifthValue);
   it('reverse()', () => {
-    let list = new LinkedList();
-    let firstValue = 'First One';
-    let secondValue = 'Second One';
-    let thirdValue = 'Third One';
-    list.append(firstValue);
-    list.append(secondValue);
-    list.append(thirdValue);
     list.reverse();
-    expect(list.head.value).toEqual(thirdValue);
+    expect(list.head.value).toEqual('Fifth One');
   });
   it('remove()', () => {
-    let list = new LinkedList();
-    let firstValue = 'First One';
-    let secondValue = 'Second One';
-    let thirdValue = 'Third One';
-    list.append(firstValue);
-    list.append(secondValue);
-    list.append(thirdValue);
-    list.remove(2);
-    expect(list.length).toEqual(2);
-    expect(list.head.value).toEqual(firstValue);
+    let results = list.remove(2);
+    expect(results.value).toBe('Third One');
+    expect(list.length).toEqual(4);
+    expect(list.head.value).toEqual('Fifth One');
   });
   it('serialize()', () => {
-    let list = new LinkedList();
-    let firstValue = 'First One';
-    let secondValue = 'Second One';
-    let thirdValue = 'Third One';
-    list.append(firstValue);
-    list.append(secondValue);
-    list.append(thirdValue);
     let value = list.serialize();
-    expect(value).toEqual(['First One', 'Second One', 'Third One']);
+    expect(value).toBeInstanceOf(Array);
+    expect(value[0].value).toBe('Fifth One');
+    expect(value[1].value).toBe('Fourth One');
+    expect(value[2].value).toBe('Second One');
+    expect(value.length).toBe(list.length);
   });
-});
-
-describe('Linked List Insertions', () => {
-  it('.insertBefore() inserts a new node before the given value', () => {
-    let list = new LinkedList;
-    list.append(1);
-    list.append(3);
-    list.insertBefore(3,2);
-    let value = list.serialize();
-    expect(list.length).toBe(3);
-    expect(value).toEqual([1,2,3]);
-
+  it('getMiddle()', () => {
+    let results = list.getMiddle();
+    expect(results.value).toBe('Second One');
   });
-  it('.insertAfter() inserts a new node after the given value', () => {
-    let list = new LinkedList;
-    list.append(1);
-    list.append(3);
-    list.insertAfter(1,2);
-    let value = list.serialize();
-    expect(list.length).toBe(3);
-    expect(value).toEqual([1,2,3,]);
+  it('getKthFromEnd', () => {
+    let one = list.getKthFromEnd(2);
+    let two = list.getKthFromEnd(1);
+    let three = list.getKthFromEnd(0);
+    expect(one.value).toBe('Fourth One');
+    expect(two.value).toBe('Second One');
+    expect(three.value).toBe('First One');
   });
-});
-
-describe('Linked List getKthFromEnd()', () => {
-  it('can get the last value', () => {
-    let list = new LinkedList;
-    list.append(1);
-    list.append(3);
-    let value = list.getKthFromEnd(0);
-    expect(value).toBe(3);
-  });
-  it('can get the value at any given point from the end', () => {
-    let list = new LinkedList;
-    list.append(1);
-    list.append(2);
-    list.append(3);
-    expect(list.getKthFromEnd(0)).toBe(3);
-    expect(list.getKthFromEnd(1)).toBe(2);
-    expect(list.getKthFromEnd(2)).toBe(1);
+  it('deserialize(arr)', () => {
+    let listArray = list.serialize();
+    let results = deserialize(listArray);
+    expect(results).toBeInstanceOf(Object);
+    expect(results.head.value).toEqual(list.head.value);
+    expect(results.head.next.value).toEqual(list.head.next.value);
   });
 });

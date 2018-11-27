@@ -1,11 +1,6 @@
 'use strict';
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+const Node = require('../lib/node.js');
 class LinkedList {
 
   constructor() {
@@ -81,28 +76,43 @@ class LinkedList {
   remove(offset) {
     let prevNode = null;
     let nextNode = null;
-    let deleteThisNode = offset;
-    let index = 1;
+    let index = 0;
+
     let currentNode = this.head;
-    while (index < deleteThisNode) {
+    while (index < offset) {
       prevNode = currentNode;
       currentNode = currentNode.next;
       index++;
     }
+    let returnVal = currentNode;
     prevNode.next = currentNode.next;
-    currentNode = null;
     this.length--;
+    currentNode = null;
+    return returnVal;
   }
+
   serialize() {
     let serialized = [];
     let currentNode = this.head;
     while(currentNode.next) {
-      serialized.push(currentNode.value);
+      serialized.push(currentNode);
       currentNode = currentNode.next;
     }
-    serialized.push(currentNode.value);
+    serialized.push(currentNode);
+    this.serialized = serialized;
     return serialized;
   }
+
+  getMiddle() {
+    let tortoise = this.head;
+    let hare = this.head;
+    while(hare && hare.next) {
+      tortoise = tortoise.next;
+      hare = hare.next.next;
+    }
+    return tortoise;
+  }
+
   getKthFromEnd(value) {
     let fast = this.head;
     let slow = this.head;
@@ -113,7 +123,7 @@ class LinkedList {
       fast = fast.next;
       slow = slow.next;
     }
-    return slow.value;
+    return slow;
   }
 }
 

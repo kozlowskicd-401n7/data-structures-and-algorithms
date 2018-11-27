@@ -9,7 +9,7 @@ Linked Lists
 Stacks and Queues
 Binary Trees -->
 
-## Arrays
+# Arrays
 
 ### Reverse Array
 Given an input array, build a function to return the array with all elements in reverse order.  No built-in language methods may be used.
@@ -26,35 +26,63 @@ Make a function that takes in an array and a number, and inserts the number into
 #### Whiteboard
 <img src='.assets/insertArray.jpg' width=640 height=480 />
 
-## Linked Lists
+# Linked Lists
 
-### Create a Linked List
+### Singly Linked List (SLL)
 Create a Linked List that incorporates nodes that hold a value and a pointer to their next node. 
 #### Methods
-##### append(value)
-Takes in a value, creates a node and adds it to the end of the list.
-##### prepend(value)
-Takes in a value, creates a node and add it to the front of the list, replacing the head.
-##### reverse()
-Reverses the location of all nodes on the list.  The head is now at the very end, etc.
-##### remove(offset)
-Moves forward through the list `offset` times, and removes that item from the list.
-##### serialize()
-Creates an array with each node taking a position in the array.
-
-### Linked List Insertions
-Create two methods, `insertBefore` and `insertAfter`.  Both take in a number and a value.  The list will move forward through the list that given number of times, where a new Node is created and added before or after that point in the list.
-#### Whiteboard
+- `append(value)`
+  Takes in a value, creates a node and adds it to the end of the list.
+- `prepend(value)`
+  Takes in a value, creates a node and add it to the front of the list, replacing the head.
+- `reverse()`
+  Reverses the location of all nodes on the list.  The head is now at the very end, etc.
+- `remove(offset)`
+  Moves forward through the list `offset` times, and removes that item from the list.
+  Returns the node that was just removed.
+- `getMiddle()`
+  Searches for the node in the middle of the list and returns it.  Does not delete the node. 
+- `insertBefore(number, value)`
+  Moves forward through the list one before `number` of positions and inserts a new node with `value` into the list, then returns the list.
+- `insertAfter(number, value)`
+  Moves forward through the list `number` of positions and inserts a new node with `value` into the list, the returns the list.
+  Rounds up if there is an odd number of nodes in the list.
+- `getKthFromEnd(number)`
+  Moves backwards through the list `number` places and returns the node at that location.
+- `serialize()`
+  Creates an array with each node object in the list taking a position in the array.
+#### Linked List Insertions Whiteboard
 <img src='.assets/ll-insertions.jpg' width=640 height=480 />
-### Add getKthFromEnd() Method
-Create a method that takes in a number, searches from the end that far and return from that position.
-#### Whiteboard
+### getKthFromEnd() Whiteboard
 <img src='.assets/getKthFromEnd.jpg' width=640 height=480 />
 ### Linked List Merge
-Given two lists, create a function that creates a new list using their alternating values.
+- `mergelists(list1, list2)`
+  This is a funtion that takes two equal length linked lists and creates a new list with their nodes' values, taking one from list1, then one from list2.  The new list will alternate between the node values of the old lists.
+  #### Whiteboard
 <img src='.assets/ll-merge.jpg' width=640 height=480 />
 
-## Stacks and Queues
+## Doubly Linked List (DLL)
+This operates identically as a SLL, except each node also has a `prev` property pointing to the previous node in the list.
+It retains the `value` and `next` properties.
+### Implemented methods
+- `append(value)`
+  Takes in `value` and adds it to the end of the list.
+- `prepend(value)`
+  Takes in `value` and adds it to the front of the list.  
+  This new node will be the new `head` and it's `next` will point to the old one.
+- `reverse()`
+  Reverses the position of every node.
+- `remove(offset)`
+  Moves forward `offset` places and removes that node from the list.
+  Returns the node that was just removed.
+- `serialize()`
+  Transposes the properties of each node object ionto individual positions of an array.
+  Returns the array.
+
+## Deserialize
+Both types of lists have access to an externalized `deserialize(array)` funtion.  This function takes in an array created by either lists' `.serialize()` function, and returns a new list created from the array.
+
+# Stacks and Queues
 
 ### Create a Stack and a Queue
 Create a Stack that serves data on a first-in-last-out basis, and a Queue that serves data on a first-in-first-out basis.
