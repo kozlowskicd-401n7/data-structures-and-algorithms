@@ -19,12 +19,12 @@ Given an input array, build a function to return the array with all elements in 
 ### Array Binary Search
 Make a function that takes in a sorted array and a value.  Perform a binary search to find the value in the array and return the index position.  Return -1 if the value is not in the array.  No pre-built methods may be used.
 #### Whiteboard
-<img src='.assets/array_binary_search.jpg' width=640 height=480 />
+<img src='./assets/array_binary_search.jpg' width=640 height=480 />
 
 ### Array Shift
 Make a function that takes in an array and a number, and inserts the number into the middle of the array.  Do not use any built-in array methods.
 #### Whiteboard
-<img src='.assets/insertArray.jpg' width=640 height=480 />
+<img src='./assets/insertArray.jpg' width=640 height=480 />
 
 # Linked Lists
 
@@ -52,14 +52,14 @@ Create a Linked List that incorporates nodes that hold a value and a pointer to 
 - `serialize()`
   Creates an array with each node object in the list taking a position in the array.
 #### Linked List Insertions Whiteboard
-<img src='.assets/ll-insertions.jpg' width=640 height=480 />
+<img src='./assets/ll-insertions.jpg' width=640 height=480 />
 ### getKthFromEnd() Whiteboard
-<img src='.assets/getKthFromEnd.jpg' width=640 height=480 />
+<img src='./assets/getKthFromEnd.jpg' width=640 height=480 />
 ### Linked List Merge
 - `mergelists(list1, list2)`
   This is a funtion that takes two equal length linked lists and creates a new list with their nodes' values, taking one from list1, then one from list2.  The new list will alternate between the node values of the old lists.
   #### Whiteboard
-<img src='.assets/ll-merge.jpg' width=640 height=480 />
+<img src='./assets/ll-merge.jpg' width=640 height=480 />
 
 ## Doubly Linked List (DLL)
 This operates identically as a SLL, except each node also has a `prev` property pointing to the previous node in the list.
