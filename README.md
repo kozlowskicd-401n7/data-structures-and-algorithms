@@ -53,12 +53,14 @@ Create a Linked List that incorporates nodes that hold a value and a pointer to 
   Creates an array with each node object in the list taking a position in the array.
 #### Linked List Insertions Whiteboard
 <img src='./assets/ll-insertions.jpg' width=640 height=480 />
+
 ### getKthFromEnd() Whiteboard
 <img src='./assets/getKthFromEnd.jpg' width=640 height=480 />
+
 ### Linked List Merge
 - `mergelists(list1, list2)`
   This is a funtion that takes two equal length linked lists and creates a new list with their nodes' values, taking one from list1, then one from list2.  The new list will alternate between the node values of the old lists.
-  #### Whiteboard
+#### Whiteboard
 <img src='./assets/ll-merge.jpg' width=640 height=480 />
 
 ## Doubly Linked List (DLL)
